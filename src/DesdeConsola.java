@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 public class DesdeConsola {
+    static String textoCifrado;
+
     public static void cifrarDesdeConsola() {
         System.out.println("Digite el texto que desea cifrar:");
         Scanner scanner = new Scanner(System.in);
@@ -21,8 +23,8 @@ public class DesdeConsola {
             System.out.println("Digite el número de caracteres a desplazar:");
             int desplazamiento = scanner.nextInt();
 
-            String textoCifrado = CesarEncryptor.cifrarTexto(texto, desplazamiento, CesarEncryptor.alfabeto);
-            System.out.println("Texto cifrado: " + textoCifrado);
+            textoCifrado = CesarEncryptor.cifrarTexto(texto, desplazamiento, CesarEncryptor.alfabeto);
+            CrearArchivo.generarArchivo();
         } else {
             System.err.println("El texto contiene caracteres no válidos.");
         }
