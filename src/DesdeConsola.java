@@ -1,10 +1,11 @@
+import java.util.Scanner;
 
 public class DesdeConsola {
     static String textoCifrado;
-
+    static Scanner scanner = new Scanner(System.in);
     public static void cifrarDesdeConsola() {
         System.out.println("Digite el texto que desea cifrar:");
-        String texto = CesarEncryptor.scanner.next();
+        String texto = scanner.nextLine();
 
         if (CesarEncryptor.esTextoValido(texto, CesarEncryptor.alfabeto)) {
             try {
