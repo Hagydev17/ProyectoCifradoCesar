@@ -7,7 +7,7 @@ public class DesdeConsola {
         System.out.println("Digite el texto que desea cifrar:");
         String texto = scanner.nextLine();
 
-        if (CesarEncryptor.esTextoValido(texto, CesarEncryptor.alfabeto)) {
+        if (ValidarAlfabeto.esTextoValido(texto, CesarEncryptor.alfabeto)) {
             try {
                 System.out.println("Texto correcto, procediendo con el cifrado");
                 for (int i = 0; i < 3; i++) {
@@ -22,7 +22,7 @@ public class DesdeConsola {
             System.out.println("Digite el número de caracteres a desplazar:");
             int desplazamiento = CesarEncryptor.scanner.nextInt();
 
-            textoCifrado = CesarEncryptor.cifrarTexto(texto, desplazamiento, CesarEncryptor.alfabeto);
+            textoCifrado = Cifrado.cifrarTexto(texto, desplazamiento, CesarEncryptor.alfabeto);
             CrearArchivo.generarArchivo();
         } else {
             System.err.println("El texto contiene caracteres no válidos.");

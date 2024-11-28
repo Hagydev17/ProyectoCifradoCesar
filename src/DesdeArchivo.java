@@ -23,7 +23,7 @@ public class DesdeArchivo {
             System.out.println("Digite el número de caracteres a desplazar:");
             int desplazamiento = CesarEncryptor.scanner.nextInt();
 
-            textoCifrado = CesarEncryptor.cifrarTexto(textoOriginal.toString(), desplazamiento, CesarEncryptor.alfabeto);
+            textoCifrado = Cifrado.cifrarTexto(textoOriginal.toString(), desplazamiento, CesarEncryptor.alfabeto);
 
             System.out.println("Texto cifrado:");
             System.out.println(textoCifrado);
@@ -31,7 +31,7 @@ public class DesdeArchivo {
             System.out.println("Descifrar? si/no");
             respuesta = CesarEncryptor.scanner.next();
             if(respuesta.equalsIgnoreCase("si")) {
-                String textoDescifrado = CesarEncryptor.cifrarTexto(textoCifrado, -desplazamiento, CesarEncryptor.alfabeto);
+                String textoDescifrado = Cifrado.cifrarTexto(textoCifrado, -desplazamiento, CesarEncryptor.alfabeto);
                 System.out.println("Texto descifrado: " + textoDescifrado);
             } else {
                 System.out.println("Adiós");
